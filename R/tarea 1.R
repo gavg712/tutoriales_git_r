@@ -1,9 +1,5 @@
 library(tidyverse)
 
-iris
-
-data_med 
-
 ggplot(data = iris) +
   aes(y = Petal.Width,
       x = Species,
