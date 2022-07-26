@@ -1,7 +1,9 @@
 library(tidyverse)
 
-eccentricity <- (mutate(iris,
+mutate(iris,
        Petal.Eccentricity = sqrt(1 - Petal.Width / Petal.Length), 
-       rank = rank(Petal.Eccentricity)))%>% [-1]
-
+       rank = rank(Petal.Eccentricity)) %>% 
+  
   slice_min(Petal.Eccentricity, n=5) 
+  eccentricity %>% select(Species, Petal.Eccentricity, rank)
+
